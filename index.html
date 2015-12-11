@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+
+<html class="no-js" ng-app="attendanceAdmin">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="Scripts/fullcalendar-2.4.0/fullcalendar-2.4.0/fullcalendar.css" rel="stylesheet" />
+    <link href="Content/select.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.cerulean.min.css" rel="stylesheet" />
+    <link href="Content/main.css" rel="stylesheet" />
+
+    <title>Schedule - From Index</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div id="applicationHost" class="container body-content admin-appHost">
+        <div data-ng-include="'/app/layout/shell.html'"></div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <span class="pull-right text-info credit">schedule Schedule Admin - &copy; Tommy Crafton</span>
+        </div>
+    </div>
+
+    <!-- 3rd Party Libraries -->
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/jquery-ui-1.8.24.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-sanitize.min.js"></script>
+    <script src="Scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="Scripts/lodash.min.js"></script>
+    <script src="Scripts/moment.min.js"></script>
+    <script src="Scripts/spin.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="Scripts/ui-calendar-master/src/calendar.js"></script>
+    <script src="Scripts/fullcalendar-2.4.0/fullcalendar-2.4.0/fullcalendar.min.js"></script>
+    <script src="Scripts/select.min.js"></script>
+
+
+    <!-- Custom Scripts -->
+    <script src="app/app.js"></script>
+    <script src="app/directives/spinner.directive.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/absences/absences-initial-data.service.js"></script>
+    <script src="app/absences/absences.controller.js"></script>
+    <script src="app/layout/area-shell.controller.js"></script>
+    <script src="app/layout/shell.controller.js"></script>
+    <script src="app/areas/areas.controller.js"></script>
+    <script src="app/area-home/area-home.controller.js"></script>
+    <script src="app/absenceReasons/absenceReasons.controller.js"></script>
+    <script src="app/services/app-spinner.service.js"></script>
+    <script src="app/services/attendance-api.service.js"></script>
+    <script src="app/services/state-watcher.service.js"></script>
+    <script src="app/employees/employees.controller.js"></script>
+
+</body>
+
+</html>

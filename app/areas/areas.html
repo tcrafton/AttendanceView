@@ -1,0 +1,22 @@
+<div>
+    <h2 class="page-title">Areas</h2>
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+        <tr>
+            <th>Area Name</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="area in vm.areas">
+            <td ng-hide="vm.currentEdit[area.id]">{{area.Name}}</td>
+            <td ng-show="vm.currentEdit[area.id]">
+                <input type="text" class="form-control" ng-model="vm.itemToEdit.name"/>
+            </td>
+            <td>
+                <button class="btn btn-primary" ui-sref="area.employees({ areaId: area.id, areaName: area.Name })">View</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

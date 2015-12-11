@@ -1,0 +1,39 @@
+<div>
+    <p></p>
+    <div class="row">
+        <div class="col-md-4">
+            <ui-select multiple reset-search-input="true" ng-model="vm.employeeFilter" theme="bootstrap">
+                <ui-select-match placeholder="Select employee to filter...">
+                    {{$item.FullName}}
+                </ui-select-match>
+                <ui-select-choices repeat="employee in vm.employees | filter:$select.search">
+                    <span ng-bind-html="employee.FullName"></span>
+                    <span><small>({{employee.ClockNum}})</small></span>
+                </ui-select-choices>
+            </ui-select>
+        </div>
+        <div class="col-md-2">
+            <select ng-model="vm.year" ng-change="vm.update()" ng-options="x for x in vm.years"></select>
+        </div>
+    </div>
+    <p></p>
+
+    <table class="table table-striped table-hover table-condensed">
+        <thead>
+        <tr>
+            <th>Absence Date</th>
+            <th>Name</th>
+            <th>Reason</th>
+            <th>Hours</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="absence in vm.absences | orderBy:'absence.AbsenceDate' | filter:vm.absenceFilter">
+                <td>{{absence.AbsenceDate | date: 'yyyy-MM-dd'}}</td>
+                <td>{{vm.employeesLookup[absence.EmployeeId]}}</td>
+                <td>{{vm.absenceReasonsLookup[absence.AbsenceReasonId]}}</td>
+                <td>{{absence.NumHours}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

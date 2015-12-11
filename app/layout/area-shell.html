@@ -1,0 +1,9 @@
+<h2>{{vm.areaName}}</h2>
+<div id="tabData">    
+
+    <tabset>
+        <tab ng-repeat="tab in vm.tabs" heading="{{tab.text}}" ui-sref="{{tab.state}}" active="tab.active"></tab>
+    </tabset>
+
+    <div ui-view="tabContent" id="tabContent" class="container admin-content"></div>
+</div>

@@ -1,0 +1,24 @@
+<div>
+    <select ng-model="vm.year" ng-change="vm.update()" ng-options="x for x in vm.years"></select>
+
+    <table class="table table-striped table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>Clock #</th>
+                <th>Name</th>
+                <th>Hours Vacation</th>
+                <th>Hours Sick</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="emp in vm.employees | orderBy:'emp.ClockNum'">
+                <td>{{emp.ClockNum}}</td>
+                <td>{{emp.FullName}}</td>
+                <td>{{emp.HoursVacation}}</td>
+                <td>{{emp.HoursSick}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
