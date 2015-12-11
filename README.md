@@ -6,5 +6,5 @@ and in my app I used SQL Server and stored procedures.  I did this to fit in wit
 database I used in this app run the SQL script in the DatabaseScript folder but first change the filename in lines 7 and 9.  Then 
 change the database connection string under Settings in Properties.
 
-In Steve's course he created a much more elaborate application that allowed data modification.  In this app I first wanted to created a 
-simple application that got me familiar with the basic concepts.
+In Steve's course he created a much more elaborate application that allowed data modification.  In this app I first wanted to create a 
+simple application to become familiar with the basic concepts.
